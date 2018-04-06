@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2.5D Dynamic Cube Vertices - Processing</title>
+        <style>
+            html, body {
+                padding: 0px;
+                margin: 0px;
+                overflow: hidden;
+            }
+            .slidecontainer {
+                position: absolute;
+                z-index: 999;
+                top: 10px;
+                right: 10px;
+            }
+            .slidecontainer input[type=range] {
+                width: 129px;
+            }
+            .checkbox {
+                margin-top: 5px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="slidecontainer">
+            <div><input type="range" min="0" max="12" value="6" id="subdivisions"></div>
+            <div><input type="range" min="30" max="300" value="100" id="size"></div>
+            <div><input type="range" min="0" max="4" value="1" step="0.1" id="rotation"></div>
+            <div class="checkbox"><input type="checkbox" id="edges" checked></div>
+        </div>
+
+        <script src="libs/quaternion.js"></script>
+        <script src="libs/p5.min.js"></script>
+        <script src="libs/p5.dom.js"></script>
+        <script src="libs/stats.min.js"></script>
+        <script src="helpers/map.js"></script>
+
+        <script src="Fake3dObject.js"></script>
+        <script src="LEDCube.js"></script>
+        <script src="index.js"></script>
+        <script type="text/javascript">
+        let game;
+
+        function setup() { game = new Game() }
+        function draw() { game.draw() }
+        </script>
+    </body>
+</html>

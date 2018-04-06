@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2.5D Dynamic Cube Vertices - GLSL</title>
+        <style>
+            html, body {
+                padding: 0px;
+                margin: 0px;
+                overflow: hidden;
+                background: #000;
+            }
+            canvas.glslSandboxCanvas {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -300px;
+                margin-top: -300px;
+            }
+            .slidecontainer {
+                position: absolute;
+                z-index: 999;
+                top: 10px;
+                right: 10px;
+            }
+            .slidecontainer input {
+                width: 129px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="slidecontainer">
+            <div><input type="range" min="0" max="12" value="8" id="subdivisions"></div>
+            <div><input type="range" min="30" max="200" value="80" id="size"></div>
+            <div><input type="range" min="1" max="4" value="1" step="0.1" id="rotation"></div>
+        </div>
+
+        <script src="libs/three.min.js"></script>
+        <script src="libs/stats.min.js"></script>
+        <script src="helpers/GlslSandbox.js"></script>
+        <script src="index.js"></script>
+        <script type="text/javascript">
+        let game = new Game();
+        </script>
+
+
+    </body>
+</html>
